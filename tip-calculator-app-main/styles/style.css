@@ -181,6 +181,7 @@ input:focus {
   width: 100%;
 }
 /*   8.4 Buttons hover */
+.active,
 .btn-tip:hover {
   background-color: var(--strong-cyan);
   color: var(--Very-dark-cyan);
@@ -223,4 +224,10 @@ input:focus {
 .span-person {
   color: var(--Light-grayish-cyan);
   font-size: 1.2rem;
+}
+.active-error {
+  display: none;
+}
+.input-error-border:focus {
+  border: 2px solid var(--strong-cyan);
 }
