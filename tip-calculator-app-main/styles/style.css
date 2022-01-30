@@ -1,0 +1,226 @@
+/* ---INSTRUCTION--- */
+/* 1. Variables */
+/* 2. Reseting styles */
+/* 3. Main styles */
+/* 4. Logo */
+/* 5. Calculator card */
+/* 6. Inputs */
+/*   6.1 Input containers */
+/*   6.2 Input text */
+/*   6.3 Input pseudo-classes */
+/*   6.4 Input error message */
+/*   6.5 Input icons */
+/* 7. Grid tip component */
+/* 8. Buttons */
+/*   8.1 Tip buttons */
+/*   8.2 Check and reset buttons */
+/*   8.4 Buttons hover */
+/* 9. Result component */
+/*   9.1 Result containers */
+/*   9.2 Result Numbers*/
+
+/* 1. Variables */
+:root {
+  /* COLORS */
+  /* Primary */
+  --strong-cyan: hsl(172, 67%, 45%);
+  --clr-error-msg: rgba(219, 144, 4, 0.993);
+  /* Neutral */
+  --lighter-cyan: hsl(172, 64%, 43%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Darker-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Lighter-grayish-cyan: hsl(189, 41%, 97%);
+}
+
+/* 2. Reseting styles */
+html {
+  font-size: 10px;
+}
+* {
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Main styles */
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--Light-grayish-cyan);
+}
+.wrapper {
+  width: 100%;
+  max-width: 56rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* 4. Logo */
+.logo {
+  margin: 3rem 0;
+}
+
+/* 5. Calculator card */
+.calculator-card {
+  background-color: white;
+  width: 100%;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Inputs */
+/*    6.1 Input containers */
+.input-container {
+  padding: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 38rem;
+  width: 100%;
+}
+
+/*   6.2 Input text */
+input {
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-align: end;
+  width: 100%;
+  height: 5rem;
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: var(--Lighter-grayish-cyan);
+}
+.input-container p {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  color: var(--Very-dark-cyan);
+}
+
+/*   6.3 Input pseudo-classes */
+input:focus {
+  outline: none;
+  border: 2px solid var(--strong-cyan);
+}
+.number-of-people:focus {
+  border: 2px solid var(--clr-error-msg);
+}
+
+/*   6.4 Input error message */
+.error-msg-container {
+  display: flex;
+  justify-content: space-between;
+}
+.error-msg {
+  font-size: 1.2rem;
+  align-self: center;
+  color: var(--clr-error-msg);
+  font-weight: 700;
+}
+
+/*   6.5 Input icons */
+.numberOfPeople-container,
+.bill-container {
+  position: relative;
+}
+
+.numberOfPeople-container img,
+.bill-container img {
+  position: absolute;
+  top: 58%;
+  left: 1.5rem;
+}
+
+/* 7. Grid tip component */
+.grid-component {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 8. Buttons */
+/*   8.1 Tip buttons */
+.btn-tip {
+  background-color: var(--Very-dark-cyan);
+  border: none;
+  height: 5rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 0.6rem;
+}
+
+/*   8.2 Check and reset button */
+.btn-check,
+.btn-reset {
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--strong-cyan);
+  color: var(--Very-dark-cyan);
+  height: 5rem;
+  border: none;
+  border-radius: 0.6rem;
+  width: 100%;
+}
+/*   8.4 Buttons hover */
+.btn-tip:hover {
+  background-color: var(--strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.btn-check:hover,
+.btn-reset:hover {
+  background-color: var(--lighter-cyan);
+  color: var(--Lighter-grayish-cyan);
+}
+
+/* 9. Result component */
+/*   9.1 result containers */
+.result-container {
+  background-color: var(--Very-dark-cyan);
+  width: 100%;
+  border-radius: 2rem;
+  margin: 0 5rem 4rem 5rem;
+  padding: 2rem;
+  padding-top: 3rem;
+  max-width: 38rem;
+}
+.tip-amount-container,
+.total-amount-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.amount {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/*   9.2 Result Numbers*/
+.tip-amount-result,
+.total-tip-result {
+  align-self: center;
+  font-size: 3.2rem;
+  color: var(--strong-cyan);
+}
+.span-person {
+  color: var(--Light-grayish-cyan);
+  font-size: 1.2rem;
+}

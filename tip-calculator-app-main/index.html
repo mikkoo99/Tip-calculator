@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <div class="calculator-card">
+        <div class="input-container">
+          <div class="bill-container">
+            <p>Bill</p>
+            <input class="bill-value" type="text" placeholder="0" />
+            <img src="./images/icon-dollar.svg" alt="" />
+          </div>
+          <div class="tip-container">
+            <p>Select Tip %</p>
+            <div class="grid-component">
+              <button class="btn-tip">5%</button>
+              <button class="btn-tip">10%</button>
+              <button class="btn-tip">15%</button>
+              <button class="btn-tip">25%</button>
+              <button class="btn-tip">50%</button>
+              <input class="input-custom" type="text" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="numberOfPeople-container">
+            <div class="error-msg-container">
+              <p>Number of People</p>
+              <div class="error-msg">Can't be zero</div>
+            </div>
+            <input class="number-of-people" type="text" placeholder="0" />
+            <img src="./images/icon-person.svg" alt="" />
+          </div>
+          <button class="btn-check">Check</button>
+        </div>
+        <div class="result-container">
+          <div class="tip-amount-container">
+            <p class="amount">
+              Tip Amount <br /><span class="span-person">/ person</span>
+            </p>
+            <p class="tip-amount-result">0.00$</p>
+          </div>
+          <div class="total-amount-container">
+            <p class="amount">
+              Total <br /><span class="span-person">/ person</span>
+            </p>
+            <p class="total-tip-result">0.00$</p>
+          </div>
+          <button class="btn-reset">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
